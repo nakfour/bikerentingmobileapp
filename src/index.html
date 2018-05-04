@@ -14,6 +14,7 @@
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
 
+
   <!-- un-comment this code to enable service worker
   <script>
     if ('serviceWorker' in navigator) {
@@ -24,12 +25,14 @@
   </script>-->
 
   <link href="build/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/maindefault.css">
 
 </head>
 <body>
 
   <!-- Ionic's root component and where the app will load -->
-  <ion-app></ion-app>
+  <ion-app>
+  </ion-app>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
@@ -40,6 +43,11 @@
 
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
+
+
+  <!--div class="main">
+    <button class="button" ion-button onclick="createMembership()">Test Adding Membership</button>
+  </div-->
 
 </body>
 </html>

@@ -1,0 +1,22 @@
+page-startbikerent {
+.top {
+ height: 100%;
+  display: block;
+  vertical-align: top;
+  background-color:0x45678;
+}
+
+.platform-android .top {
+    height: 100%;
+      display: block;
+      vertical-align: top;
+}
+.bottom {
+  //padding: $content-padding;
+  //position: fixed;
+  bottom:0;
+  left: 0;
+  right: 0;
+  height: 100px;
+}
+}

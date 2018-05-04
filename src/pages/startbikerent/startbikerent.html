@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Bike Rental
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content >
+
+  <ion-slides #bikerentalSlider >
+
+    <ion-slide class="top">
+      <!--p *ngIf="submitAttempt" style="color: #ea6153;">Please fill out all details accurately.</p-->
+
+      <ion-list no-lines>
+
+        <form [formGroup]="slideOneForm">
+          <ion-item>
+            <ion-label floating>Bike id</ion-label>
+            <ion-input formControlName="bikeid" type="number" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Subscriber</ion-label>
+            <ion-select formControlName="subscriber">
+              <ion-option value="Subscriber" checked="true">Subscriber</ion-option>
+              <ion-option value="Customer">Customer</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Gender</ion-label>
+            <ion-select formControlName="gender" >
+              <ion-option value="2" checked="true">Female</ion-option>
+              <ion-option value="1">Male</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Birth Year</ion-label>
+            <ion-input formControlName="birthyear" type="number"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Start Time</ion-label>
+            <ion-input formControlName="starttime" type="text"></ion-input>
+          </ion-item>
+
+
+        </form>
+
+      </ion-list>
+    </ion-slide>
+
+
+    <ion-slide class="top">
+
+      <ion-list no-lines>
+
+        <form [formGroup]="slideTwoForm">
+
+          <ion-item>
+            <ion-label floating>Start Station id</ion-label>
+            <ion-input formControlName="startstationid" type="number"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Start Station name</ion-label>
+            <ion-input formControlName="startstationname" type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Start Station lat</ion-label>
+            <ion-input formControlName="startstationlat" type="number"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Start Station lon</ion-label>
+            <ion-input formControlName="startstationlon" type="number"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Mobile OS</ion-label>
+            <ion-select formControlName="mobileos">
+              <ion-option value="Android" checked="true">Android</ion-option>
+              <ion-option value="iOS">iOS</ion-option>
+              <ion-option value="Windows">Windows</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <div class="bottom" text-center>
+              <button ion-button full  color="primary" (click)="save()">Start Rental</button>
+            </div>
+          </ion-item>
+        </form>
+
+
+      </ion-list>
+
+
+
+
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
+
+

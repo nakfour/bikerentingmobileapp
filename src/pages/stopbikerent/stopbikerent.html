@@ -1,0 +1,95 @@
+<!--
+  Generated template for the StopbikerentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Bike Rental
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button icon-left (click)="prev()"><ion-icon name="arrow-back"></ion-icon> Prev</button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-right (click)="next()">Next <ion-icon name="arrow-forward"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content >
+
+  <ion-slides #bikerentalSlider >
+
+    <ion-slide class="top">
+      <!--p *ngIf="submitAttempt" style="color: #ea6153;">Please fill out all details accurately.</p-->
+
+      <ion-list no-lines>
+
+        <form [formGroup]="slideOneForm">
+          <ion-item>
+            <ion-label floating>Bike id</ion-label>
+            <ion-input formControlName="bikeid" type="number" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>End Time</ion-label>
+            <ion-input formControlName="endtime" type="text"></ion-input>
+          </ion-item>
+
+
+        </form>
+
+      </ion-list>
+    </ion-slide>
+
+
+    <ion-slide class="top">
+
+      <ion-list no-lines>
+
+        <form [formGroup]="slideTwoForm">
+
+          <ion-item>
+            <ion-label floating>End Station id</ion-label>
+            <ion-input formControlName="endstationid" type="number"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>End Station name</ion-label>
+            <ion-input formControlName="endstationname" type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>End Station lat</ion-label>
+            <ion-input formControlName="endstationlat" type="number"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>End Station lon</ion-label>
+            <ion-input formControlName="endstationlon" type="number"></ion-input>
+          </ion-item>
+
+
+          <ion-item>
+            <div class="bottom" text-center>
+              <button ion-button full  color="primary" (click)="save()">Drop Rental</button>
+            </div>
+          </ion-item>
+        </form>
+
+
+      </ion-list>
+
+
+
+
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
+
+
