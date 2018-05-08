@@ -55,8 +55,6 @@ export class StartbikerentPage {
 
   constructor(public navCtrl: NavController,public http: Http,public formBuilder: FormBuilder, private toastCtrl: ToastController) {
       this.http=http
-      //this.sendHTTP();
-
       this.slideOneForm = formBuilder.group({
               bikeid:['18330'],
               subscriber: ['Subscriber'],
@@ -126,8 +124,6 @@ export class StartbikerentPage {
 ///////////////////////// POST Start Rental ////////////////////////////////////
   let headers = new Headers({ 'Content-Type': 'application/json' });
       let options = new RequestOptions({ headers: headers });
-
-//JSON.stringify(data)
   	    this.http.post('<insert-url>', data, options)
   	      .subscribe(res => {
   	      	//console.log(res.json());

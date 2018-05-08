@@ -1,8 +1,6 @@
 page-home {
 
 .mainlist {
-    //background-image: url('../assets/img/background.png');
-    //background-repeat: no-repeat;
     background-size:cover;
     background-size: 100%;
     height: 500px;
@@ -33,15 +31,10 @@ page-home {
   margin-left: 22%;
 }
 .bottom {
-  //padding: $content-padding;
-  //position: fixed;
-
   bottom:0;
   left: 0;
   right: 0;
-  //padding-top:80%;
   height: 500px;
-  //padding-bottom: 90%;
 }
 
 .rentaltext {
@@ -52,7 +45,6 @@ page-home {
     display: block;
     margin-left: 4%;
     top:60%;
-    //font-family: 'Comic Neue', sans-serif;
     font-weight: 700;
     font-size: 1.5em;
     line-height: 1.5;

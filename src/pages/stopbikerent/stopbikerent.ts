@@ -45,8 +45,7 @@ export class StopbikerentPage {
 
 
   constructor(public navCtrl: NavController,public http: Http,public formBuilder: FormBuilder, private toastCtrl: ToastController) {
-      this.http=http
-      //this.sendHTTP();
+      this.http=http;
 
       this.slideOneForm = formBuilder.group({
               bikeid:['18330'],

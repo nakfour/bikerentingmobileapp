@@ -1,5 +1,14 @@
 {
   "name": "radMobileApp",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "<insert-url"
+    }
+  ]
 }

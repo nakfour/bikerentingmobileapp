@@ -14,7 +14,6 @@
   <ion-item>
     <div class="mainlist">
       <img class="bikeicon" src="assets/icon/bike-blue.png" alt="bike icon">
-      <!--button class="button" ion-button full  color="primary" [navPush]="startrental">Start Rental</button-->
       <div class="bottom" text-center>
       <button #startrent ion-button round  large color="secondary" (click)="scanQR()" style="width:350px;background-color: #28b4c9;"> Rent Bike </button>
       <button *ngIf="rentalstatus" #droprent ion-button round  large color="primary" (click)="returnBike()" style="width:350px;"> Return Bike </button>

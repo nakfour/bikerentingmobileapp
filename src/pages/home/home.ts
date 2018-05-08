@@ -52,19 +52,14 @@ public  itemTapped(e) {
 }
 
 public scanQR() {
-    /*this.buttonText = "Loading..";
-    this.loading = true;*/
 
     this._barcodeScanner.scan().then((barcodeData) => {
       if (barcodeData.cancelled) {
         console.log("User cancelled the action!");
-        /*this.buttonText = "Scan";
-        this.loading = false;*/
         return false;
       }
       console.log("Scanned successfully!");
       console.log(barcodeData);
-      //this.goToResult(barcodeData);
 
       this.bikeID=Number(barcodeData.text);
       let data = {
@@ -115,7 +110,6 @@ sendHTTPRent(data, bikeid) {
   	      	var msg="Enjoy riding bike #" + bikeid;
   	      	this.presentToast(msg);
   	      	this.rentalstatus = true;
-  	      	//this.rentaltext.value="You are now Renting bike #" + bikeid;
   	      	this.rentalStatusText="You are now Renting bike #" + bikeid;
   	      	this.navCtrl.pop();
 
